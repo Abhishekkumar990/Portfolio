@@ -6,16 +6,13 @@
 }
 
 body {
-    background: #080808;
-    color: #fff;
+    background: #F8F8F8;
+    color: #000;
 }
 
 .header {
     width: 100%;
     height: 100vh;
-    /* background-image: url(/image/Abhishek\ photo.jpg);
-    background-size: cover;
-    background-position: center; */
 }
 
 nav {
@@ -41,7 +38,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -70,4 +67,29 @@ nav ul li a:hover::after {
 .header-text h1 {
     font-size: 60px;
     margin-top: 20px;
+    white-space: nowrap;
+}
+
+.photo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Styles only the image */
+
+.profile-pic {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+@media (max-witdh: 500px) {
+    .header-text h1 {
+        display: block;
+    }
 }
