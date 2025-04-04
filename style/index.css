@@ -14,7 +14,7 @@ body {
     flex: 1;
     width: 100%;
     position: relative;
-    background-image: url('../image/img_black.jpg');
+    background-image: url('https://raw.githubusercontent.com/Abhishekkumar990/Portfolio/main/image/img_black.jpg');
     background-repeat: no-repeat;
     background-size: 300px;
     /* Smaller screens - Show full image */
