@@ -11,13 +11,15 @@ body {
 }
 
 .header {
+    flex: 1;
     width: 100%;
-    height: 100vh;
     position: relative;
-    background-image: url('/image/Abhishek\ photo.png');
+    background-image: url('/image/img_black.jpg');
     background-repeat: no-repeat;
-    background-size: 40vw 60vh;
-    background-position: center;
+    background-size: 300px;
+    /* Smaller screens - Show full image */
+    background-position: right center;
+    overflow: hidden;
 }
 
 nav {
@@ -75,42 +77,15 @@ nav ul li a:hover::after {
     white-space: nowrap;
 }
 
-.photo-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/* Styles only the image */
-
-.profile-pic {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: #000;
-    cursor: pointer;
-}
-
-@media (max-witdh: 500px) {
-    .header-text h1 {
-        display: block;
+@media (max-width: 500px) {
+    .header {
+        background-image: url('/image/img_black.jpg');
+        background-repeat: no-repeat;
+        background-size: 100px;
+        background-position: right center;
+        overflow: hidden;
     }
-    .menu-toggle {
-        display: block;
-        /* Show ☰ button */
-    }
-    .nav-links {
+    */ .nav-links {
         display: none;
         /* Hide menu */
         flex-direction: column;
@@ -129,6 +104,14 @@ nav ul li a:hover::after {
     .nav-links li {
         display: block;
         padding: 10px;
+    }
+    .header-text {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: left;
+        /* Ensure text is aligned properly */
     }
 }
 
