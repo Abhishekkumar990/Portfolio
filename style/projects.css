@@ -9,3 +9,7 @@ body {
     width: 100%;
     background-color: antiquewhite;
 }
+
+.nav-links {
+    transition: all 0.3s ease-in-out;
+}
