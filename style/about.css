@@ -74,7 +74,7 @@ nav {
     .nav-links {
         display: none;
         flex-direction: column;
-        background: #222;
+        background: black;
         position: absolute;
         width: 100%;
         top: 50px;
