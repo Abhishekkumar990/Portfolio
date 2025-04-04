@@ -134,6 +134,54 @@ nav ul li a:hover::after {
     }
 }
 
+@media (max-width: 300px) {
+    .header {
+        background-size: 120px;
+        background-position: center top;
+        padding: 10px;
+    }
+    .logo {
+        width: 100px;
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    nav ul li {
+        margin: 5px 0;
+        display: block;
+    }
+    nav ul li a {
+        font-size: 14px;
+    }
+    .header-flex {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .header-text {
+        max-width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+    .header-text h1 {
+        font-size: 24px;
+        white-space: normal;
+        margin-top: 10px;
+    }
+    .about-card h3 {
+        font-size: 14px;
+    }
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
 footer {
     text-align: center;
     padding: 20px;
