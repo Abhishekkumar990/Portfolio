@@ -123,7 +123,7 @@ nav ul li a:hover::after {
         height: auto;
     }
     .header-text {
-        max-width: 70%;
+        max-width: 65%;
         padding: 20px;
     }
     .header-text h1 {
