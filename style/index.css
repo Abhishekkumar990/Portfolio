@@ -13,6 +13,11 @@ body {
 .header {
     width: 100%;
     height: 100vh;
+    position: relative;
+    background-image: url('/image/Abhishek\ photo.png');
+    background-repeat: no-repeat;
+    background-size: 40vw 60vh;
+    background-position: center;
 }
 
 nav {
