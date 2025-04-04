@@ -1,11 +1,127 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-    height: 100vh;
+    background: #F8F8F8;
+    color: #000;
+}
+
+.header {
     width: 100%;
-    background-color: antiquewhite;
+    height: 100vh;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container {
+    padding: 10px 10px;
+}
+
+.logo {
+    width: 120px;
+    border-radius: 20%;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+/* flex box css  */
+
+.flex-container {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.flex-about {
+    flex: 1;
+    padding: 20px;
+    background-color: #ff004f;
+    color: #F8F8F8;
+    text-align: center;
+    border-radius: 10px;
+    width: 90%;
+}
+
+
+/* Responsive Menu */
+
+@media (max-width: 768px) {
+    .header-text h1 {
+        display: block;
+    }
+    .menu-toggle {
+        display: block;
+        /* Show ☰ button */
+    }
+    .nav-links {
+        display: none;
+        /* Hide menu */
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .nav-links.show {
+        display: flex;
+        /* Show menu when button is clicked */
+    }
+    .nav-links li {
+        display: block;
+        padding: 10px;
+    }
+    .flex-container {
+        flex-direction: column;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    margin-top: 20px;
 }

@@ -11,98 +11,111 @@ body {
     color: #000;
 }
 
-.container {
-    width: 90%;
-    margin: auto;
-    padding: 20px;
-}
-
-header {
-    background: #fff;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
+.header {
     width: 100%;
-    z-index: 1000;
+    height: 100vh;
 }
 
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container {
     padding: 10px 10px;
 }
 
 .logo {
-    width: 140px;
+    width: 120px;
     border-radius: 20%;
 }
 
-.nav-links {
-    display: flex;
+nav ul li {
     list-style: none;
+    display: inline-block;
+    margin: 10px 20px;
 }
 
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    color: white;
+nav ul li a {
+    color: #000;
     text-decoration: none;
     font-size: 18px;
-    padding: 8px 12px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
     transition: 0.3s;
 }
 
-.nav-links a:hover {
-    background: #ff004f;
-    border-radius: 5px;
+nav ul li a:hover::after {
+    width: 100%;
 }
 
-.hamburger {
-    font-size: 30px;
-    color: white;
-    display: none;
-    cursor: pointer;
+
+/* flex box css  */
+
+.flex-container {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.flex-about {
+    flex: 1;
+    padding: 20px;
+    background-color: #ff004f;
+    color: #F8F8F8;
+    text-align: center;
+    border-radius: 10px;
+    width: 90%;
 }
 
 
 /* Responsive Menu */
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: black;
-        position: absolute;
-        width: 100%;
-        top: 50px;
-        left: 0;
-        text-align: center;
-    }
-    .nav-links.active {
-        display: flex;
-    }
-    .nav-links li {
-        margin: 15px 0;
-    }
-    .hamburger {
+    .header-text h1 {
         display: block;
     }
-}
-
-
-/* Sections */
-
-h1,
-h2 {
-    color: #ff004f;
-}
-
-section {
-    padding: 40px 0;
-    animation: fadeIn 1s ease-in-out;
+    .menu-toggle {
+        display: block;
+        /* Show ☰ button */
+    }
+    .nav-links {
+        display: none;
+        /* Hide menu */
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .nav-links.show {
+        display: flex;
+        /* Show menu when button is clicked */
+    }
+    .nav-links li {
+        display: block;
+        padding: 10px;
+    }
+    .flex-container {
+        flex-direction: column;
+    }
 }
 
 footer {
@@ -111,22 +124,4 @@ footer {
     background: #222;
     color: #fff;
     margin-top: 20px;
-}
-
-
-/* Fade-in Animation */
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.nav-links {
-    transition: all 0.3s ease-in-out;
 }

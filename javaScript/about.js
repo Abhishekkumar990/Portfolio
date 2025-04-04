@@ -3,4 +3,8 @@
 
  hamburger.addEventListener('click', () => {
      navLinks.classList.toggle('active');
+     hamburger.classList.toggle('active');
+
+     // Change icon to 'X' when open
+     hamburger.textContent = hamburger.classList.contains('active') ? '✕' : '☰';
  });
