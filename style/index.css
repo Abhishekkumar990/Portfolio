@@ -230,7 +230,7 @@ footer {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     /* Navigation: stack links vertically or collapse into fewer gaps */
     .nav-container {
         flex-direction: column;
