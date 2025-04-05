@@ -125,14 +125,47 @@ nav ul li a:hover::after {
         background-position: right center;
     }
     .header-flex {
+        display: flex;
         max-width: 70%;
-        justify-content: left;
+        align-items: flex-start;
+        /* Aligns content to left */
+        justify-content: flex-start;
+        gap: 20px;
         padding: 10px;
         height: auto;
+        flex-direction: column;
+    }
+    .header-button {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+    }
+    /* Actual button styling (example button) */
+    .header-button button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #ff004f;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    .header-button button:hover {
+        background-color: #e60045;
+    }
+    .header-button button a {
+        text-decoration: none;
+        color: #F8F8F8;
+        font-size: 20px;
     }
     .header-text {
         max-width: 70%;
         padding: 20px;
+    }
+    .button-email {
+        gap: 20px;
     }
     .header-text h1 {
         font-size: clamp(24px, 5vw, 36px);
