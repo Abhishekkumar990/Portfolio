@@ -245,3 +245,19 @@ footer {
         gap: 10px;
     }
 }
+
+.contact-item {
+    flex: 1 1 250px;
+}
+
+.contact-item a {
+    display: block;
+    color: #ff004f;
+    text-decoration: none;
+    margin-top: 5px;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #e60045;
+}
