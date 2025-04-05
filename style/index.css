@@ -1,13 +1,16 @@
+/* Global Reset */
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', 'sans-serif';
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
+
+/* Base Body Style */
+
 body {
-    margin: 0;
-    padding: 0;
     background: #F8F8F8;
     color: #000;
     display: flex;
@@ -15,97 +18,98 @@ body {
     min-height: 100vh;
 }
 
-.header {
-    height: 90vh;
-    width: 100%;
-    position: relative;
-    background-image: url('https://raw.githubusercontent.com/Abhishekkumar990/Portfolio/main/image/img_black.jpg');
-    background-repeat: no-repeat;
-    background-size: 250px;
-    background-position: right center;
-    overflow: hidden;
+
+/* Navigation */
+
+.site-header {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 10px 20px;
 }
 
-nav {
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.container {
-    padding: 10px 10px;
+    align-items: center;
 }
 
 .logo {
-    width: 140px;
-    border-radius: 20%;
+    width: 120px;
 }
 
-nav ul li {
+.nav-links {
     list-style: none;
-    display: inline-block;
-    margin: 10px 20px;
+    display: flex;
+    gap: 90px;
 }
 
-nav ul li a {
-    color: #000;
+.nav-links li a {
     text-decoration: none;
-    font-size: 18px;
+    color: #000;
+    font-size: 16px;
     position: relative;
+    transition: color 0.5s ease;
 }
 
-nav ul li a::after {
+.nav-links li a::after {
     content: '';
-    width: 0;
-    height: 2px;
-    background: #ff004f;
     position: absolute;
     left: 0;
     bottom: -6px;
-    transition: 0.3s;
+    width: 0;
+    height: 2px;
+    background: #ff004f;
+    transition: width 0.3s ease;
 }
 
-nav ul li a:hover::after {
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
     width: 100%;
 }
 
-.header-flex {
-    justify-content: left;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    padding: 0 40px;
-    flex-wrap: wrap;
+.nav-links li a.active {
+    color: #ff004f;
 }
 
 
-/* Header text box styling */
+/* Header Layout */
+
+.header {
+    width: 100%;
+    padding: 40px 20px;
+    background: #ffffff;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Left Text */
 
 .header-text {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
+    flex: 1;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
-    max-width: 900px;
-    color: #000;
-    text-align: left;
-    bottom: 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .name1 {
-    transition: all 1s ease-in-out;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-}
-
-.header-text h1 {
     font-size: 48px;
-    margin-top: 30px;
-    white-space: nowrap;
+    margin-bottom: 20px;
+    word-break: break-word;
 }
 
-.header span {
+.header-text span {
     color: #ff004f;
 }
 
@@ -115,21 +119,23 @@ nav ul li a:hover::after {
 
 .about-card h3 {
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
+
+.header-text hr {
+    margin: 15px 0;
+}
+
+
+/* Buttons */
 
 .header-button {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     gap: 16px;
     margin-top: 20px;
     flex-wrap: wrap;
-    /* Prevents overflow if too many buttons */
 }
-
-
-/* Individual button style */
 
 .header-button button {
     padding: 10px 24px;
@@ -142,16 +148,10 @@ nav ul li a:hover::after {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-
-/* Hover effect */
-
 .header-button button:hover {
     background-color: #e60045;
     transform: translateY(-2px);
 }
-
-
-/* Anchor tag inside button */
 
 .header-button button a {
     text-decoration: none;
@@ -159,165 +159,72 @@ nav ul li a:hover::after {
     font-size: 16px;
 }
 
-@media (max-width: 800px) {
-    .header {
-        background-image: url('https://raw.githubusercontent.com/Abhishekkumar990/Portfolio/main/image/img_black.jpg');
-        background-size: 230px;
-        background-position: right center;
-    }
-    .header-flex {
-        display: flex;
-        max-width: 70%;
-        align-items: flex-start;
-        /* Aligns content to left */
-        justify-content: flex-start;
-        gap: 20px;
-        padding: 10px;
-        height: auto;
-        flex-direction: column;
-    }
-    .header-button {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 10px;
-    }
-    /* Actual button styling (example button) */
-    .header-button button {
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: #ff004f;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-    }
-    .header-button button:hover {
-        background-color: #e60045;
-    }
-    .header-button button a {
-        text-decoration: none;
-        color: #F8F8F8;
-        font-size: 20px;
-    }
-    .header-text {
-        max-width: 70%;
-        padding: 20px;
-    }
-    .button-email {
-        gap: 20px;
-    }
-    .header-text h1 {
-        font-size: clamp(24px, 5vw, 36px);
-        white-space: normal;
-        line-height: 1.2;
-        overflow-wrap: break-word;
-        word-break: break-word;
-    }
-    .about-card h3 {
-        font-size: 13px;
-        transition: all 0.4s ease-out;
-    }
+
+/* Right Image */
+
+.header-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (max-width: 300px) {
-    .header {
-        background-size: 120px;
-        background-position: center top;
-        padding: 10px;
-    }
-    .logo {
-        width: 100px;
-    }
-    nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    nav ul {
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-    nav ul li {
-        margin: 5px 0;
-        display: block;
-    }
-    nav ul li a {
-        font-size: 14px;
-    }
-    .header-flex {
-        flex-direction: column;
-        padding: 10px;
-        gap: 20px;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-    .header-text {
-        max-width: 100%;
-        width: 100%;
-        padding: 15px;
-        text-align: center;
-        word-break: break-word;
-        overflow-wrap: break-word;
-    }
-    .header-text h1 {
-        font-size: clamp(18px, 6vw, 48px);
-        white-space: normal;
-        line-height: 1.2;
-        word-break: break-word;
-        overflow-wrap: break-word;
-    }
-    /* ======= NEW: Header Button Styling for Small Screens ======= */
-    .header-button {
-        display: flex;
-        flex-direction: column;
-        /* Stack buttons */
-        align-items: center;
-        gap: 10px;
-        width: 100%;
-        padding: 10px 0;
-    }
-    .header-button button {
-        width: 80%;
-        max-width: 280px;
-        padding: 10px 20px;
-        font-size: 16px;
-        background-color: #ff004f;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-    .header-button button:hover {
-        background-color: #e60045;
-        transform: translateY(-2px);
-    }
-    .header-button button a {
-        text-decoration: none;
-        color: #ffffff;
-        font-size: 16px;
-        display: inline-block;
-        width: 100%;
-    }
-    .button-email {
-        gap: 20px;
-    }
-    .about-card h3 {
-        font-size: 14px;
-    }
-    footer {
-        font-size: 12px;
-        padding: 10px;
-    }
+.header-img img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
 }
+
+
+/* Footer */
 
 footer {
     text-align: center;
     padding: 20px;
     background: #222;
     color: #fff;
-    height: 8vh;
+    height: auto;
+    margin-top: auto;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 800px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    .header-img {
+        order: -1;
+    }
+    .nav-links {
+        flex-direction: row;
+        align-items: center;
+        gap: 35px;
+    }
+    .header-text {
+        max-width: 100%;
+    }
+    .header-img img {
+        max-width: 90%;
+    }
+    .name1 {
+        font-size: clamp(28px, 6vw, 36px);
+    }
+    .about-card h3 {
+        font-size: 15px;
+    }
+    .header-button {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .header-button button {
+        width: 80%;
+        max-width: 300px;
+    }
 }

@@ -2,58 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfoilio</title>
-    <link rel="stylesheet" href="style/index.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style/index.css" />
 </head>
-<!-- THis should be on -->
 
 <body>
-    <div class="header">
-        <div class="overlay"></div>
-        <!--  background image -->
-        <div class="container">
+    <!-- Navigation -->
+    <header class="site-header">
+        <div class="nav-container">
+            <img src="https://raw.githubusercontent.com/Abhishekkumar990/Portfolio/main/image/logo1.png" alt="Logo" class="logo" />
             <nav>
-                <img src="https://raw.githubusercontent.com/Abhishekkumar990/Portfolio/main/image/logo1.png" class="logo" alt="logo">
-                <!-- toggle button for the phone function -->
-
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-
-                        <a href="public/about.html">AboutMe</a>
-                    </li>
-                    <li>
-                        <a href="public/contact.html">Contact</a>
-                    </li>
-                    <li>
-                        <a href="public/project.html">Projects</a>
-                    </li>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="public/about.html">AboutMe</a></li>
+                    <li><a href="public/contact.html">Contact</a></li>
+                    <li><a href="public/project.html">Projects</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="header-flex">
-            <div class="header-text">
+    </header>
 
+    <!-- Hero / Header Section -->
+    <section class="header">
+        <div class="header-container">
+            <!-- Left Text -->
+            <div class="header-text">
                 <h1 class="name1">Hi, I'm <br><span>Abhishek</span> Kumar Sharma</h1>
 
                 <div class="about-card">
-                    <h3>&bull; I’m a Web Developer skilled in both front-end and back-end development, with experience in Salesforce, Node.js, and CRM solutions. As a SaaSWork intern, I optimized CRM products, enhancing efficiency and user experience.
-                    </h3>
-                    <hr>
+                    <h3>&bull; I’m a Web Developer skilled in both front-end and back-end development, with experience in Salesforce, Node.js, and CRM solutions. As a SaaSWork intern, I optimized CRM products, enhancing efficiency and user experience.</h3>
+                    <hr />
                     <h3>&bull; I’ve built projects like a college website, a hiring system, and a solar power CRM, showcasing my ability to develop scalable and impactful digital solutions. Passionate about learning, innovation, and improving technology,
                         I thrive on solving real-world challenges through code.</h3>
                 </div>
+
+                <div class="header-button">
+                    <button class="btn-email"><a href="public/contact.html">Contact Me</a></button>
+                    <button class="Phone-btn"><a href="public/project.html">Show Projects</a></button>
+                </div>
             </div>
-            <div class="header-button">
-                <button class="btn-email"><a href="public/contact.html">Contact Me</a></button>
-                <button class="Phone-btn"><a href="public/project.html">Show Projects</a></button>
+
+            <!-- Right Image -->
+            <div class="header-img">
+                <img src="https://raw.githubusercontent.com/Abhishekkumar990/Portfolio/main/image/img_black.jpg" alt="Abhishek image" />
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Abhishek Kumar Sharma. All rights reserved.</p>
     </footer>
@@ -62,5 +60,3 @@
 </body>
 
 </html>
-
-<!-- some nav link chnage -->

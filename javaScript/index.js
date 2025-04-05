@@ -22,3 +22,14 @@ let inactivityTime = function() {
 };
 
 inactivityTime();
+document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll("nav ul li a");
+    const currentPage = window.location.pathname.split("/").pop(); // gets current filename
+
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href").split("/").pop();
+        if (linkPage === currentPage || (linkPage === "" && currentPage === "")) {
+            link.classList.add("active");
+        }
+    });
+});
