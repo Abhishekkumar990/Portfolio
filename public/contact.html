@@ -2,42 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="../style/contact.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me - Abhishek Kumar Sharma</title>
+    <link rel="stylesheet" href="../style/contact.css" />
 </head>
 
 <body>
-    <div class="header">
-        <div class="container">
+    <!-- Header Navigation (same style) -->
+    <header class="site-header">
+        <div class="nav-container">
+            <img src="https://raw.githubusercontent.com/Abhishekkumar990/Portfolio/main/image/logo1.png" alt="Logo" class="logo" />
             <nav>
-                <img src="https://raw.githubusercontent.com/Abhishekkumar990/Portfolio/main/image/logo1.png" class="logo" alt="logo">
-                <!-- toggle button for the phone function -->
-
-                <ul>
-                    <li>
-                        <a href="../index.html">Home</a>
-                    </li>
-                    <li>
-
-                        <a href="about.html">About Me</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li>
-                        <a href="project.html">Projects</a>
-                    </li>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="project.html">Projects</a></li>
                 </ul>
             </nav>
-
         </div>
-    </div>
+    </header>
 
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <h2>Contact <span>Me</span></h2>
+            <p>If you have any questions, project ideas or just want to connect — feel free to reach out!</p>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="form-status"></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Abhishek Kumar Sharma. All rights reserved.</p>
     </footer>
+
+    <script src="../javaScript/contact.js"></script>
 </body>
 
 </html>
