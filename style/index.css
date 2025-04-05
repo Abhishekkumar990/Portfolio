@@ -71,10 +71,10 @@ nav ul li a:hover::after {
 }
 
 .header-flex {
-    display: flex;
     justify-content: left;
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
-    height: ;
     padding: 0 40px;
     flex-wrap: wrap;
 }
@@ -116,6 +116,47 @@ nav ul li a:hover::after {
 .about-card h3 {
     font-size: 18px;
     line-height: 1.5;
+}
+
+.header-button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    /* Prevents overflow if too many buttons */
+}
+
+
+/* Individual button style */
+
+.header-button button {
+    padding: 10px 24px;
+    font-size: 16px;
+    background-color: #ff004f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+/* Hover effect */
+
+.header-button button:hover {
+    background-color: #e60045;
+    transform: translateY(-2px);
+}
+
+
+/* Anchor tag inside button */
+
+.header-button button a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
 }
 
 @media (max-width: 800px) {
