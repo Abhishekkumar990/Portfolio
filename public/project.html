@@ -2,43 +2,68 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
-    <link rel="stylesheet" href="../style/projects.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="../style/projects.css" />
 </head>
 
 <body>
-    <div class="header">
-        <div class="container">
-            <nav>
-                <img src="https://raw.githubusercontent.com/Abhishekkumar990/Portfolio/main/image/logo1.png" class="logo" alt="logo">
-                <!-- toggle button for the phone function -->
+    <!-- Navigation -->
+    <header class="site-header">
+        <div class="nav-container">
+            <img src="../image/logo1.png" class="logo" alt="logo" />
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="project.html" class="active">Projects</a></li>
+            </ul>
+        </div>
+    </header>
 
-                <ul>
-                    <li>
-                        <a href="../index.html">Home</a>
-                    </li>
-                    <li>
+    <!-- Projects Section -->
+    <section class="experience-section">
+        <h2>My Projects</h2>
+        <div class="experience-container">
 
-                        <a href="about.html">About Me</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li>
-                        <a href="project.html">Projects</a>
-                    </li>
-                </ul>
-            </nav>
+            <!-- Project Card 1 -->
+            <div class="experience-card">
+                <img src="../image/project1.jpg" alt="ToDo App" />
+                <h3>ToDo App</h3>
+                <p><strong>Tools:</strong> HTML, CSS, JavaScript, Firebase</p>
+                <p>
+                    A responsive task management application with authentication and real-time database functionality using Firebase. Users can add, delete, and update tasks with ease.
+                </p>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="experience-card">
+                <img src="../image/project2.jpg" alt="Portfolio Website" />
+                <h3>Portfolio Website</h3>
+                <p><strong>Tools:</strong> HTML, CSS, JavaScript</p>
+                <p>
+                    A sleek and modern personal portfolio site showcasing my skills, resume, and contact information. Built with a clean responsive design and consistent color theme.
+                </p>
+            </div>
+
+            <!-- Project Card 3 -->
+            <div class="experience-card">
+                <img src="../image/project3.jpg" alt="Movie App" />
+                <h3>Movie Database App</h3>
+                <p><strong>Tools:</strong> Node.js, MongoDB, Express, HTML, CSS</p>
+                <p>
+                    A backend-powered movie listing app where users can browse, add, and manage movies. Features include JWT authentication and admin-only content management.
+                </p>
+            </div>
 
         </div>
-    </div>
+    </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Abhishek Kumar Sharma. All rights reserved.</p>
     </footer>
-    </div>
 </body>
 
 </html>

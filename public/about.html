@@ -5,10 +5,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me</title>
+
+    <!-- Font Awesome Icons (Correct Version) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-BxEpZyCOoJ6hvDW4KcphGqczTZBDZlwJqUJlPHc5yU3cB+Vx0vN/mOKywIcrGrQJg5uNkY7tFi7sLDkO7qHPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="../style/about.css" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,7 +29,7 @@
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="about.html" class="active">About Me</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="Project">Projects</a></li>
+                <li><a href="project.html">Projects</a></li>
             </ul>
         </div>
     </header>
@@ -31,29 +39,37 @@
         <div class="header-container">
             <div class="header-text">
                 <h1 class="name1">Hi, I'm <span>Abhishek Kumar Sharma</span></h1>
-                <p>I am a passionate web developer with experience in front-end and back-end development, including hands-on work with Salesforce extensions, building functional and responsive websites using HTML, CSS, JavaScript, Firebase, and MongoDB.</p>
+                <p>
+                    I am a passionate web developer with experience in front-end and back-end development, including hands-on work with Salesforce extensions, building functional and responsive websites using HTML, CSS, JavaScript, Firebase, and MongoDB.
+                </p>
 
+                <!-- Contact Info (Flexbox) -->
                 <div class="contact-flex">
                     <div class="contact-item">
-                        <strong>Phone:</strong>
-                        <a href="7033274299">+917033274299</a>
+                        <strong><i class="fas fa-phone-alt"></i> Phone:</strong>
+                        <a href="tel:+917033274299">+91 7033274299</a>
                     </div>
                     <div class="contact-item">
-                        <strong>Email:</strong>
-                        <a href="abhi6299.eway@gmail.com">abhi6299.eway@gmail.com</a>
+                        <strong><i class="fas fa-envelope"></i> Email:</strong>
+                        <a href="mailto:abhi6299.eway@gmail.com">abhi6299.eway@gmail.com</a>
                     </div>
                     <div class="contact-item">
-                        <strong>LinkedIn:</strong>
-                        <a href="https://www.linkedin.com/in/abhishek-kumar-sharma-31b614223" target="_blank">https://www.linkedin.com/in/abhishek-kumar-sharma-31b614223</a>
-                    </div>
-                    <div class="header-button">
-                        <button><a href="../resume (2).pdf" download>Download Resume</a></button>
+                        <strong><i class="fab fa-linkedin"></i> LinkedIn:</strong>
+                        <a href="https://www.linkedin.com/in/abhishek-kumar-sharma-31b614223">
+              linkedin.com/in/abhishek-kumar-sharma-31b614223
+            </a>
                     </div>
                 </div>
-                <div class="header-img">
-                    <img src="../image/test1.jpeg" alt="Your Photo" />
+
+                <div class="header-button">
+                    <button><a href="../resume (2).pdf" download>Download Resume</a></button>
                 </div>
             </div>
+
+            <div class="header-img">
+                <img src="../image/main.jpg" alt="Your Photo" />
+            </div>
+        </div>
     </section>
 
     <!-- Skills Section -->
@@ -63,8 +79,8 @@
             <div class="skill"><i class="fab fa-html5"></i> HTML</div>
             <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
             <div class="skill"><i class="fab fa-js-square"></i> JavaScript</div>
-            <div class="skill"><i class="fab fa-react"></i> React</div>
-            <div class="skill"><i class="fab fa-node"></i> Node.js</div>
+            <div class="skill"><i class="fab fa-react"></i> Java</div>
+            <div class="skill"><i class="fab fa-node-js"></i> Node.js</div>
             <div class="skill"><i class="fas fa-database"></i> MongoDB</div>
             <div class="skill"><i class="fas fa-fire"></i> Firebase</div>
         </div>
@@ -76,24 +92,26 @@
         <div class="experience-container">
             <div class="experience-card">
                 <img src="../image/incapp.jpg" alt="Certificate 1">
-                <p><strong>Web Development Cource</strong><br>Completed 3-months</p>
+                <p><strong>Web Development Course</strong><br>Completed 3 months</p>
                 <p>&bull; HTML</p>
                 <p>&bull; CSS</p>
                 <p>&bull; JavaScript</p>
-                <p>&bull; NodeJs</p>
-
+                <p>&bull; Node.js</p>
             </div>
+
             <div class="experience-card">
                 <img src="../image/Saasworx.png" alt="Certificate 2">
-                <p><strong>Salesforce Developer</strong><br>Certification from Saasworx Consulting Private Limited </p><br>
-                <p>I have hands-on experience with Salesforce technology, working on CRM-based solutions and implementing filters to enhance overall system efficiency.
+                <p><strong>Salesforce Developer</strong><br>Certification from Saasworx Consulting Private Limited</p>
+                <p>
+                    Worked on CRM-based products using Salesforce technology, including filter implementation and system optimization.
                 </p>
             </div>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+        <p>&copy; 2025 Abhishek Kumar Sharma. All Rights Reserved.</p>
     </footer>
 
 </body>

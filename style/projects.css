@@ -1,127 +1,159 @@
+/* Reset & Global Styles */
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     background: #F8F8F8;
     color: #000;
-}
-
-.header {
-    width: 100%;
-    height: 100vh;
-}
-
-nav {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.container {
-    padding: 10px 10px;
+
+/* Navigation */
+
+.site-header {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 10px 20px;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
     width: 120px;
-    border-radius: 20%;
 }
 
-nav ul li {
+.nav-links {
     list-style: none;
-    display: inline-block;
-    margin: 10px 20px;
+    display: flex;
+    gap: 90px;
 }
 
-nav ul li a {
-    color: #000;
+.nav-links li a {
     text-decoration: none;
-    font-size: 18px;
+    color: #000;
+    font-size: 16px;
     position: relative;
+    transition: color 0.5s ease;
 }
 
-nav ul li a::after {
+.nav-links li a::after {
     content: '';
-    width: 0;
-    height: 2px;
-    background: #ff004f;
     position: absolute;
     left: 0;
     bottom: -6px;
-    transition: 0.3s;
+    width: 0;
+    height: 2px;
+    background: #ff004f;
+    transition: width 0.3s ease;
 }
 
-nav ul li a:hover::after {
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
     width: 100%;
 }
 
-
-/* flex box css  */
-
-.flex-container {
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f2f2f2;
+.nav-links li a.active {
+    color: #ff004f;
 }
 
-.flex-about {
-    flex: 1;
-    padding: 20px;
-    background-color: #ff004f;
-    color: #F8F8F8;
+
+/* Projects Section */
+
+.experience-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.experience-section h2 {
+    font-size: 32px;
+    font-weight: 600;
     text-align: center;
+    margin-bottom: 40px;
+    color: #111;
+}
+
+.experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.experience-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+    max-width: 360px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.experience-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
     border-radius: 10px;
-    width: 90%;
+    margin-bottom: 15px;
+}
+
+.experience-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #ff004f;
+}
+
+.experience-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #333;
 }
 
 
-/* Responsive Menu */
-
-@media (max-width: 768px) {
-    .header-text h1 {
-        display: block;
-    }
-    .menu-toggle {
-        display: block;
-        /* Show ☰ button */
-    }
-    .nav-links {
-        display: none;
-        /* Hide menu */
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        width: 100%;
-        background-color: white;
-        text-align: center;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    .nav-links.show {
-        display: flex;
-        /* Show menu when button is clicked */
-    }
-    .nav-links li {
-        display: block;
-        padding: 10px;
-    }
-    .flex-container {
-        flex-direction: column;
-    }
-}
+/* Footer */
 
 footer {
     text-align: center;
     padding: 20px;
     background: #222;
     color: #fff;
-    margin-top: 20px;
+    margin-top: auto;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 800px) {
+    .nav-links {
+        gap: 40px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .experience-card {
+        max-width: 100%;
+    }
+    .experience-section h2 {
+        font-size: 24px;
+    }
 }
