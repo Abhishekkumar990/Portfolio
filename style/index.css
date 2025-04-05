@@ -249,6 +249,10 @@ nav ul li a:hover::after {
     .header-flex {
         flex-direction: column;
         padding: 10px;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
     .header-text {
         max-width: 100%;
@@ -260,11 +264,46 @@ nav ul li a:hover::after {
     }
     .header-text h1 {
         font-size: clamp(18px, 6vw, 48px);
-        /* Responsive font size */
         white-space: normal;
         line-height: 1.2;
         word-break: break-word;
         overflow-wrap: break-word;
+    }
+    /* ======= NEW: Header Button Styling for Small Screens ======= */
+    .header-button {
+        display: flex;
+        flex-direction: column;
+        /* Stack buttons */
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .header-button button {
+        width: 80%;
+        max-width: 280px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #ff004f;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .header-button button:hover {
+        background-color: #e60045;
+        transform: translateY(-2px);
+    }
+    .header-button button a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 16px;
+        display: inline-block;
+        width: 100%;
+    }
+    .button-email {
+        gap: 20px;
     }
     .about-card h3 {
         font-size: 14px;
