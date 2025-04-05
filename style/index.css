@@ -125,7 +125,7 @@ nav ul li a:hover::after {
         background-position: right center;
     }
     .header-flex {
-        max-width: 85%;
+        max-width: 70%;
         justify-content: left;
         padding: 20px;
         height: auto;
