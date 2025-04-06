@@ -1,10 +1,13 @@
- const hamburger = document.getElementById('hamburger');
- const navLinks = document.getElementById('navLinks');
+const hamburger = document.getElementById('hamburger');
+const hamburgerIcon = document.getElementById('hamburger-icon');
+const navLinks = document.getElementById('navLinks');
 
- hamburger.addEventListener('click', () => {
-     navLinks.classList.toggle('active');
-     hamburger.classList.toggle('active');
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
 
-     // Change icon to 'X' when open
-     hamburger.textContent = hamburger.classList.contains('active') ? '✕' : '☰';
- });
+    if (navLinks.classList.contains('show')) {
+        hamburgerIcon.innerHTML = '&times;'; // ×
+    } else {
+        hamburgerIcon.innerHTML = '&#9776;'; // ☰
+    }
+});
